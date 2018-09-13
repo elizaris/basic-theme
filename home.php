@@ -9,15 +9,15 @@ if( have_posts() ):
   while( have_posts() ): the_post(); ?>
   <?php get_template_part('content', get_post_format()); ?>
 <?php endwhile; ?>
-
-<div class="col-xs-6">
+<div class="d-flex flex-row justify-content-center">
+<div class="col-xs-6 text-left">
   <?php next_posts_link('Older Posts'); ?>
 </div>
 
-<div class="col-xs-6">
+<div class="col-xs-6 text-right">
   <?php previous_posts_link('Newer Posts'); ?>
 </div>
-
+</div>
 <?php
 endif;
 ?>
