@@ -8,7 +8,17 @@
 if( have_posts() ):
   while( have_posts() ): the_post(); ?>
   <?php get_template_part('content', get_post_format()); ?>
-  <?php endwhile;
+<?php endwhile; ?>
+
+<div class="col-xs-6">
+  <?php next_posts_link('Older Posts'); ?>
+</div>
+
+<div class="col-xs-6">
+  <?php previous_posts_link('Newer Posts'); ?>
+</div>
+
+<?php
 endif;
 ?>
 
